@@ -1,10 +1,10 @@
 <template>
   <div class="dashboard">
-    <div class="dash_menu" :style="{'background-image': 'url(' + require('../assets/images/sidebar-1.jpg') + ')'}">
+    <div class="dash_menu">
       <div class="inside">
         <div class="logo">
-          <img src="../assets/logo.png" alt="Logo" />
-          <h1>Dashboard</h1>
+          <h1><i class="far fa-snowflake"></i> CMS</h1>
+          <div class="toogle_menu"><i class="fas fa-bars"></i></div>
         </div>
       </div>
     </div>
@@ -27,32 +27,47 @@ export default {
   .dash_menu{
     width: 300px;
     height: 100vh;
-    background: red;
+    background: #FFF;
+    box-shadow: 0 0 2rem 0 rgba(136,152,170,.15);
     position: relative;
-  }
-  .dash_menu:before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: rgba(0,0,0,0.6);
   }
   .logo{
     display: flex;
-    justify-content: center;
-    align-content: center;
+    justify-content: left;
+    align-items: center;
     color: #FFF;
-    padding: 25px 0;
+    padding: 25px 25px;
     position: relative;
     z-index: 100;
+    font-weight: 700;
   }
   .logo h1{
-    font-size: 24px;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
     margin-left: 10px;
+    color: #5E72E4;
+    text-shadow: 1px 1px 1px #dedede,
+    1px 2px 1px #dedede,
+    1px 3px 1px #dedede,
+    1px 4px 1px #dedede,
+    1px 8px 6px rgba(16,16,16,0.4);
+    flex-grow: 1;
   }
   .logo img{
     width: 30px;
+    height: 30px;
+  }
+  .logo h1 svg{
+    width: 30px;
+  }
+  .toogle_menu{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .toogle_menu svg{
+    font-size: 20px;
+    color: #000;
   }
 </style>
